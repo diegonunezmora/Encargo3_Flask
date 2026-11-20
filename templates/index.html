@@ -23,7 +23,8 @@ Menú principal - Encargo 3
     </p>
 
     <div class="menu">
-        <a href="/notas" class="btn">
+        <a href="{{ url_for('seleccionar_ejercicio', numero=1) }}"
+           class="btn">
             Ir al cálculo de notas
         </a>
     </div>
@@ -40,7 +41,8 @@ Menú principal - Encargo 3
     </p>
 
     <div class="menu">
-        <a href="/nombres" class="btn">
+        <a href="{{ url_for('seleccionar_ejercicio', numero=2) }}"
+           class="btn">
             Ir a comparación de nombres
         </a>
     </div>
