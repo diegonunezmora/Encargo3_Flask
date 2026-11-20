@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encargo 3 - Aplicación Flask</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Bienvenido a mi aplicación Flask</h1>
+
+        <p style="text-align: center;">
+            Selecciona uno de los siguientes ejercicios:
+        </p>
+
+        <!-- Ejercicio 1 -->
+        <div class="card">
+
+            <h2>Ejercicio 1: Cálculo de notas</h2>
+
+            <p>
+                Ingresa las tres notas y el porcentaje de asistencia
+                para conocer el promedio y el estado final.
+            </p>
+
+            <div class="menu">
+                <a href="/notas" class="btn">
+                    Ir al cálculo de notas
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="card">
+
+            <h2>Ejercicio 2: Comparación de nombres</h2>
+
+            <p>
+                Ingresa tres nombres para identificar cuál tiene
+                la mayor cantidad de caracteres.
+            </p>
+
+            <div class="menu">
+                <a href="/nombres" class="btn">
+                    Ir a comparación de nombres
+                </a>
+            </div>
+
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;">
+            Aplicación desarrollada con Python y Flask
+        </p>
+
+    </div>
+
+</body>
+</html>
