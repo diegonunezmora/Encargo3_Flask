@@ -1,76 +1,69 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2 - Comparación de nombres</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+{% extends "base.html" %}
 
-<body>
+{% block titulo %}
+Ejercicio 2 - Comparación de nombres
+{% endblock %}
 
-    <div class="container">
+{% block contenido %}
 
-        <div class="card">
+<div class="card">
 
-            <h1>Comparación de nombres</h1>
+    <h1>Comparación de nombres</h1>
 
-            <p class="subtitulo">
-                Ingresa tres nombres para descubrir cuál tiene la mayor cantidad de caracteres.
-            </p>
+    <p>
+        Ingresa tres nombres para descubrir cuál tiene
+        la mayor cantidad de caracteres.
+    </p>
 
-            <form method="POST">
+    <form method="POST">
 
-                <div class="form-group">
-                    <label for="nombre1">Primer nombre</label>
-                    <input type="text" id="nombre1" name="nombre1"
-                           placeholder="Ejemplo: Ana" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="nombre2">Segundo nombre</label>
-                    <input type="text" id="nombre2" name="nombre2"
-                           placeholder="Ejemplo: Isidora" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="nombre3">Tercer nombre</label>
-                    <input type="text" id="nombre3" name="nombre3"
-                           placeholder="Ejemplo: Alejandro" required>
-                </div>
-
-                <button type="submit" class="btn">
-                    Comparar nombres
-                </button>
-
-            </form>
-
-            {% if resultado %}
-
-            <div class="resultado">
-
-                <h2>Resultado de la comparación</h2>
-
-                <p>
-                    El nombre más largo es:
-                    <strong>{{ resultado.nombre }}</strong>
-                </p>
-
-                <p>
-                    Cantidad de caracteres:
-                    <strong>{{ resultado.cantidad }}</strong>
-                </p>
-
-            </div>
-
-            {% endif %}
-
-            <a href="/" class="volver">Volver al menú principal</a>
-
+        <div class="form-group">
+            <label for="nombre1">Primer nombre</label>
+            <input type="text" id="nombre1" name="nombre1"
+                   placeholder="Ejemplo: Ana" required>
         </div>
+
+        <div class="form-group">
+            <label for="nombre2">Segundo nombre</label>
+            <input type="text" id="nombre2" name="nombre2"
+                   placeholder="Ejemplo: Isidora" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre3">Tercer nombre</label>
+            <input type="text" id="nombre3" name="nombre3"
+                   placeholder="Ejemplo: Alejandro" required>
+        </div>
+
+        <button type="submit" class="btn">
+            Comparar nombres
+        </button>
+
+    </form>
+
+    {% if resultado %}
+
+    <div class="resultado">
+
+        <h2>Resultado de la comparación</h2>
+
+        <p>
+            El nombre más largo es:
+            <strong>{{ resultado.nombre }}</strong>
+        </p>
+
+        <p>
+            Cantidad de caracteres:
+            <strong>{{ resultado.cantidad }}</strong>
+        </p>
 
     </div>
 
-</body>
-</html>
+    {% endif %}
+
+    <a href="/" class="volver">Volver al menú principal</a>
+
+</div>
+
+{% endblock %}
